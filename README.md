@@ -9,6 +9,7 @@ Run the following command
 ```bash
 cd /usr/local/lib/node_modules
 git clone https://github.com/andrimanna/homebridge-http-doorbell
+npm install -g --unsafe-perm http
 ```
 
 Chances are you are going to need sudo with that.
