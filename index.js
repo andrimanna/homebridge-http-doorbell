@@ -52,7 +52,6 @@ HTTPDoorbell.prototype.httpHandler = function(that, doorbellId) {
 
 function DoorbellAccessory(config) {
     this.name = config["name"];
-    this.duration = config["duration"] || 2;
     this.doorbellId = config["id"] || 0;
     this.binaryState = 0;
     this.service = null;
