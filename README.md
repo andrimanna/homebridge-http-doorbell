@@ -5,8 +5,10 @@ This plugin offers you a doorbell that can be triggerd via an HTTP request.
 ## Installation
 
 Run the following command
-```
-npm install -g homebridge-http-doorbell
+
+```bash
+cd /usr/local/lib/node_modules
+git clone https://github.com/andrimanna/homebridge-http-doorbell
 ```
 
 Chances are you are going to need sudo with that.
@@ -15,16 +17,15 @@ Chances are you are going to need sudo with that.
 
 This is an example configuration
 
-```
+```json
 "platforms" : [
     {
         "platform": "http-doorbell",
         "port": 9053,
         "doorbells": [
             {
-               "name": "Front doorbell",
-               "id": "front",
-               "duration": 2
+               "name": "Campanello",
+               "id": "ingresso"
             }
         ]
     }
@@ -37,4 +38,3 @@ This is an example configuration
 | port          | Required. The port that you want this plugin to listen on. Should be above 1024.   |
 | doorbells[].name | Required. The name of this doorbell. This will appear in your homekit app       |
 | doorbells[].id | Optional. Sets doorbell id for webhook, seqeuntial from 1 by default              |
-| doorbells[].duration | Optional. Sets doorbell duration, 2 seconds by default.                     |
